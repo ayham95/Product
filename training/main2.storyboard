@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hello-->
+        <scene sceneID="bSD-NS-qlG">
+            <objects>
+                <tableViewController title="Hello" id="9f5-XA-f1k" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="81" sectionHeaderHeight="28" sectionFooterHeight="28" id="qHZ-gb-aVs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="quotecell" rowHeight="81" id="YBo-ww-hlf" customClass="QuoteCell" customModule="training" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="81"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YBo-ww-hlf" id="3sr-gi-NTL">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Innovation distinguishes between a leader and a follower." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5m-bW-ZqM">
+                                            <rect key="frame" x="16" y="8" width="349" height="33.5"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                            <color key="textColor" red="0.0031438465230000001" green="0.87770968680000006" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steve Jobs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBT-YW-bDq">
+                                            <rect key="frame" x="8" y="51" width="365" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.0031438465230000001" green="0.87770968680000006" blue="1" alpha="0.3965111301" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="b5m-bW-ZqM" firstAttribute="top" secondItem="3sr-gi-NTL" secondAttribute="topMargin" id="G0l-cH-bxM"/>
+                                        <constraint firstItem="b5m-bW-ZqM" firstAttribute="leading" secondItem="3sr-gi-NTL" secondAttribute="leadingMargin" constant="8" id="JVa-9q-doM"/>
+                                        <constraint firstItem="oBT-YW-bDq" firstAttribute="leading" secondItem="3sr-gi-NTL" secondAttribute="leading" constant="8" id="OGX-9V-aq1"/>
+                                        <constraint firstAttribute="trailing" secondItem="b5m-bW-ZqM" secondAttribute="trailing" constant="10" id="pxI-dt-dgz"/>
+                                        <constraint firstAttribute="trailing" secondItem="oBT-YW-bDq" secondAttribute="trailing" constant="2" id="wPS-Qc-6DV"/>
+                                        <constraint firstAttribute="bottom" secondItem="oBT-YW-bDq" secondAttribute="bottom" constant="15" id="yRO-hi-8Bp"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="QuoteCell">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <connections>
+                                    <outlet property="authorLabel" destination="oBT-YW-bDq" id="9lL-cc-rx3"/>
+                                    <outlet property="quoteLabel" destination="b5m-bW-ZqM" id="ySU-ph-FHL"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9f5-XA-f1k" id="CHR-Oi-gAN"/>
+                            <outlet property="delegate" destination="9f5-XA-f1k" id="WF4-LY-3bY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Quotes" id="PRq-Iy-3zr"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Umr-KP-rXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40" y="-527"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="R3V-PD-JhH">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ulj-tJ-W5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="rKm-zT-tJC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LYc-KC-iij">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9f5-XA-f1k" kind="relationship" relationship="rootViewController" id="0nu-Xy-cVt"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-604" y="-526"/>
+        </scene>
+    </scenes>
+</document>
